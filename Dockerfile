@@ -17,7 +17,8 @@ RUN cd $HOME \
 
 # Ensure signals are forwarded to the JVM process correctly for graceful shutdown
 ENV LAUNCH_JBOSS_IN_BACKGROUND true
-#ADD helloworld.war /opt/jboss/wildfly/standalone/deployments/
+USER jboss
+ADD gameoflife.war /opt/jboss/wildfly/standalone/deployments/
 # Expose the ports we're interested in
 EXPOSE 8080
 
