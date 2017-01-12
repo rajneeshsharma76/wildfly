@@ -21,7 +21,7 @@ USER jboss
 ADD jenkins.war /opt/jboss/wildfly/standalone/deployments/
 # Expose the ports we're interested in
 EXPOSE 8080
-
+VOULME /var/log/dockerlogs:/opt/ForDocker/jboss-as-7.1.1.Final/standalone/log/
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interface
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
