@@ -18,7 +18,7 @@ RUN cd $HOME \
 # Ensure signals are forwarded to the JVM process correctly for graceful shutdown
 ENV LAUNCH_JBOSS_IN_BACKGROUND true
 USER jboss
-#ADD jenkins.war /opt/jboss/wildfly/standalone/deployments/
+ADD gameoflife.war /opt/jboss/wildfly/standalone/deployments/
 # Expose the ports we're interested in
 EXPOSE 8080
 VOLUME /var/log/dockerlogs:/opt/ForDocker/jboss-as-7.1.1.Final/standalone/log/
