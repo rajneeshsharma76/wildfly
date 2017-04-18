@@ -20,7 +20,7 @@ ENV LAUNCH_JBOSS_IN_BACKGROUND true
 USER jboss
 ADD ./target/jboss-kitchensink.war /opt/jboss/wildfly/standalone/deployments/
 # Expose the ports we're interested in
-EXPOSE 8083
+EXPOSE 8080
 #VOLUME /var/log/dockerlogs:/opt/ForDocker/jboss-as-7.1.1.Final/standalone/log/
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interface
